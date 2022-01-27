@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { darken } from 'polished'
+import { darken, transparentize } from 'polished'
 
 export const Container = styled.form`
   h2 {
@@ -63,37 +63,49 @@ export const TransactionTypeContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
+`
 
-  button {
-    height: 4rem;
+interface RadioBoxProps {
+  isActive: boolean;
+  activeColor: 'green' | 'red';
+}
 
-    border: 1px solid #d7d7d7;
-    border-radius: 0.25rem;
+const colors = {
+  green: '#33cc95',
+  red: '#e52e4d',
+}
 
-    background: transparent;
+export const RadioBox = styled.button<RadioBoxProps>`
+  height: 4rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  border: 1px solid #d7d7d7;
+  border-radius: 0.25rem;
 
-    transition: border-color 0.2s;
+  background: ${(props) => props.isActive 
+    ? transparentize(0.9, colors[props.activeColor])
+    : 'transparent'};
 
-    &:hover {
-      border-color: ${darken(0.1, '#d7d7d7')};
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    img {
-      width: 20px;
-      height: 20px;
-    }
+  transition: border-color 0.2s;
 
-    span {
-      display: block; // default is 'inline' so 'margin-top' doesn't work, when 'block', makes 'strong' behave as if it were a 'div'
+  &:hover {
+    border-color: ${darken(0.1, '#d7d7d7')};
+  }
 
-      margin-left: 1rem;
-      font-size: 1rem;
+  img {
+    width: 20px;
+    height: 20px;
+  }
 
-      color: var(--text-title);
-    }
+  span {
+    display: block; // default is 'inline' so 'margin-top' doesn't work, when 'block', makes 'strong' behave as if it were a 'div'
+
+    margin-left: 1rem;
+    font-size: 1rem;
+
+    color: var(--text-title);
   }
 `
