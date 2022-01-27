@@ -1,6 +1,4 @@
-import { useContext } from 'react';
-
-import { TransactionsContext } from '../../contexts/TransactionsContext';
+import { useTransactions } from '../../hooks/useTransactions';
 
 import incomeImg from '../../assets/income.svg'
 import outcomeImg from '../../assets/outcome.svg'
@@ -9,7 +7,7 @@ import totalImg from '../../assets/total.svg'
 import { Container } from "./styles";
 
 export function Summary() {
-  const { transactions } = useContext(TransactionsContext);
+  const { transactions } = useTransactions();
 
   const summary = transactions.reduce((acc, transaction) => { // 'acc' => accumulator/counter | 'reduce' goes through all items and calculates a total of some desired/informed property
     if(transaction.type === 'deposit') {
