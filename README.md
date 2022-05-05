@@ -21,6 +21,7 @@
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - [React](https://reactjs.org)
+- [ViteJS](https://vitejs.dev/)
 - [styled-components](https://styled-components.com/)
 - [MirageJS](https://miragejs.com/)
 - [Axios](https://github.com/axios/axios)
@@ -31,7 +32,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O projeto tem como objetivo o estudo e desenvolvimento de uma aplicação em ReactJS aplicando conceitos utilizados no dia a dia de um desenvolvedor Front-end.
 
-dt money foi desenvolvido utilizando hooks, contexto, comunicação com API utilizando o Axios e mirageJS para simular os responses do back-end. Foi implementado conceitos relacionados a tratamento de formulários e modal.
+dt money foi desenvolvido utilizando o framework ViteJS utilizando hooks, contexto, comunicação com API utilizando o Axios e mirageJS para simular os responses do back-end. Foi implementado conceitos relacionados a tratamento de formulários e modal.
 
 Este é um projeto desenvolvido como prática das aulas do Chapter II da trilha ReactJS do **[Programa Ignite](https://www.rocketseat.com.br/ignite)** da Rocketseat.
 
