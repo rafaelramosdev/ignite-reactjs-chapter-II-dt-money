@@ -41,8 +41,8 @@ Este é um projeto desenvolvido como prática das aulas do Chapter II da trilha 
 Clone o projeto e acesse a pasta do mesmo.
 
 ```bash
-$ git clone https://github.com/rafaelramosdev/ignite-reactjs-chapter-II-dt-money
-$ cd ignite-reactjs-chapter-II-dt-money
+$ git clone https://github.com/rafaelramosdev/dt-money
+$ cd dt-money
 ```
 
 Para iniciá-lo, siga os passos abaixo:
